@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "story book",
+    "title": "A Tale of Nine tailed",
+    "price": 0,
+    "category": "Free",
+    "image": "./lifeofslice.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "time travel book",
+    "title": "A Tale of Nine tailed",
+    "price": 0,
+    "category": "Free",
+    "image": "./image.png"
+  },
+  {
+    "id": 3,
+    "name": "horror book",
+    "title": "A Tale of Nine tailed",
+    "price": 0,
+    "category": "Free",
+    "image": "./Banner.png"
+  },
+  {
+    "id": 4,
+    "name": "comedy book",
+    "title": "A Tale of Nine tailed",
+    "price": 0,
+    "category": "Free",
+    "image": "./image.png"
+  },
+  {
+    "id": 5,
+    "name": "love story book",
+    "title": "A Tale of Nine tailed",
+    "price": 0,
+    "category": "Free",
+    "image": "./image.png"
+  },
+  {
+    "id": 6,
+    "name": "time travel book",
+    "title": "A Tale of Nine tailed",
+    "price": 0,
+    "category": "Free",
+    "image": "./image.png"
+  }
+]
