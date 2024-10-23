@@ -3,6 +3,7 @@ import First from "./First/First"; /*home page*/
 import Signup from './components/Signup'
 import Course from "./courses/Courses";
 import { Routes, Route } from "react-router-dom";
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/course" element={<Course />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
+        <Toaster/>
       </div>
     </>
   );

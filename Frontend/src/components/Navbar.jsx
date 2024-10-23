@@ -4,7 +4,7 @@ import Login from "./Login";
 
 function Navbar() {
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    localStorage.getItem("theme") ? localStorage.getItem("theme"): "light"
   );
   const element = document.documentElement;
   useEffect(() => {
@@ -13,9 +13,10 @@ function Navbar() {
       localStorage.setItem("theme", "dark");
       document.body.classList.add("dark");
     } else {
-      element.classList.remove("dark");
+      element.classList.add("light");
       localStorage.setItem("theme", "light");
-      document.body.classList.remove("dark");
+      document.body.classList.remove("");
+      
     }
   }),
     [theme];

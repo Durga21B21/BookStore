@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import Signup from "./Signup";
 import { useForm } from "react-hook-form";
+import axios from 'axios'
+import toast from 'react-hot-toast';
 
 function Login() {
   const {
@@ -10,7 +13,25 @@ function Login() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    await axios.post("http://localhost:4001/user/login",userInfo)
+    .then((res)=>{
+      console.log(res.data)
+      if(res.data){
+        toast.success("Login Successfull");}
+        localStorage.setItem("Users",JSON.stringify(res.data.user))
+      }).catch((err)=>{
+        if(err.response){
+          console.log(err)
+          toast.error("Error: "+err.response.data.message);
+        }
+      })
+  };
+  
 
   return (
     <div>
@@ -60,9 +81,11 @@ function Login() {
               <br />
             </div>
             <div className="flex justify-around mt-4">
-              <button className="bg-pink-500 text-white rounded-md px-3 py-21 hover:bg-pink-700 duration-200">
+            <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
                 Login
               </button>
+            
+      
               <p className="text-xl">
                 Not registered?{" "}
                 <Link
